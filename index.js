@@ -21,7 +21,7 @@ const DashboardRouter = require("./routes/Dashboard.Route");
 mongoose.set('strictQuery', true);
 app.use(express.text());
 app.use(express.json());
-app.use(cors());
+app.use(cors({origin:"*"}));
 
 //routes
 app.get("/", (req, res) => {
